@@ -43,7 +43,7 @@ ARG RESTY_CONFIG_OPTIONS="\
     --with-stream_ssl_module \
     --with-threads \
     "
-ARG RESTY_CONFIG_OPTIONS_MORE=""
+ARG RESTY_CONFIG_OPTIONS_MORE="--with-luajit-xcflags='-mno-sse4.2'"
 
 LABEL resty_version="${RESTY_VERSION}"
 LABEL resty_openssl_version="${RESTY_OPENSSL_VERSION}"
